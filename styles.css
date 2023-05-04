@@ -89,13 +89,14 @@ a{
 {
     position: absolute;
    user-select: none; 
-   font-size: 5em;
+   font-size: 7em;
    color: rgb(231,231,231);
    bottom: -16%;
    left: -5%;
    font-weight: bold;
    /* scale: (1.2); */
    transition: all 3s;
+  
 }
 .user-image img
 {
@@ -289,7 +290,8 @@ a{
   .projectsection
   {
     background-color:rgb(321,231,231) ;
-     margin-top: 4rem;
+    background-size: cover;
+    margin-top: 4rem;
 
   }
   .projectheader
@@ -313,17 +315,17 @@ a{
   {
     width: 90%;
     height: 550px;
-    background-image: url(images/projects/Project1.png);
+    /* background-image: url(images/projects/Project1.png); */
     background-size: cover;
     filter: blur(-1px);
     /* background-repeat: no-repeat; */
     position: relative;
     box-shadow:0px 0px 40px #1f1f1f;
   }
-  .projectcard:hover.projectcontent
+  /* .projectcard:hover.projectcontent
   {
     scale: 2;
-  }
+  } */
   .projectcard::after{
     content: "";
     position: absolute;
@@ -382,9 +384,20 @@ a{
   {
     display: block;
   }
+  .projectcard:hover .projectcontent
+  {
+    /* display: block; */
+    transform: scale(1.1);
+  }
   .projectnumberr
   {
     right: -40px;
+    top: -45px;
+
+  }
+  .projectnumberl
+  {
+    left: -40px;
     top: -45px;
 
   }
@@ -394,6 +407,8 @@ a{
   }
   .projectcontentr
   {
+    /* position: absolute; */
+    /* right: ; */
     right: 10%;
   }
   .projectskill
@@ -437,4 +452,72 @@ a{
   .icon:hover
   {
     color: var(--bgOrange);
+  }
+  #project1
+  {
+    background-image: url(images/projects/Project1.png);
+   
+  }
+  #project2
+  {
+    margin-left: 120px;
+    background-image: url(images/projects/Project2.png);
+   
+  }
+
+  @media (max-width:1300px) {
+    .pageheader {
+      padding-top: 30px;
+      color: var(--bgOrange);
+      text-align: center;
+      font-size: 40px;
+    }
+    .projectcontainer {
+      padding: 5px;
+      margin: 10px;
+      gap: 60px;
+    }
+    .projectcard {
+      width: 100%;
+      height: 300px;
+    }
+    .projectcard {
+      background-size: cover;
+      background-position: center;
+    }
+    .projectcontent {
+      scale: 0.5;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+    .projectcontentl {
+      left: 0;
+    }
+    .projectheading {
+      font-size: 40px;
+      width: 100%;
+    }
+    .projectsubheading {
+      width: 100%;
+    }
+    #project2 {
+      margin-left: 0;
+    }
+    /* #project4 {
+      margin-left: 0;
+    } */
+    .projectskill {
+      width: 100%;
+    }
+    .project-skill {
+      width: 35px;
+    }
+    .projectcard:hover .projectnumber {
+      display: none;
+    }
+    .projectcard:hover .projectcontent {
+      scale: 0.55;
+    }
   }
