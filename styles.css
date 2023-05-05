@@ -517,7 +517,7 @@ a{
     .projectcard:hover .projectnumber {
       display: none;
     }
-    .projectcard:hover .projectcontent {
+    .project         card:hover .projectcontent {
       scale: 0.55;
     }
   }
